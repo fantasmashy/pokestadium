@@ -70,7 +70,7 @@ typedef struct MiniActor {
     /* 0x264 */ s16 unk_264;        //  always zero
     /* 0x266 */ s16 collidingActorId;
     /* 0x268 */ s16 collidingActorId_alt;							//	**	ekans only
-    /* 0x26A */ s16 unk_26A;        //	some flag related to collisions
+    /* 0x26A */ s16 unk_26A;        //	animation something
     /* 0x26C */ s16 unk_26C;        //	animation something
     /* 0x26E */ s16 unk_26E;		//	animation something
     /* 0x270 */ s16 unk_270;		//	???								**	metapod only
@@ -116,7 +116,7 @@ typedef struct MiniActor {
     /* 0x2AC */ s16 isComp;
     /* 0x2AE */ s16 unk_2AE;		//	???					**	metapod only
     /* 0x2B0 */ s16 sandshrewFailChances;	//	3,2,1,0		**	sandsrew only
-    /* 0x2B2 */ s16 unk_2B2;
+    /* 0x2B2 */ s16 compExtraDelay;						//	**	ekans only
 } MiniActor; // size = 0x2B4
 
 // Possibly unk_D_86002F34_alt7, unk_D_86002F34_alt8, 

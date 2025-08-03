@@ -750,7 +750,7 @@ void func_86E0063C(MiniActor* metapod, s32 arg1) {
 
     metapod->unk_244 = temp_s1;
     metapod->unk_29E = sp2C;
-    metapod->unk_2B2 = sp24;
+    metapod->compExtraDelay = sp24;
 }
 
 void func_86E0073C(MiniActor* arg0, s32 arg1) {
@@ -775,13 +775,13 @@ void func_86E0073C(MiniActor* arg0, s32 arg1) {
 
     arg0->unk_244 = sp2C;
     arg0->unk_29E = var_a0;
-    arg0->unk_2B2 = var_a2;
+    arg0->compExtraDelay = var_a2;
 }
 
 void func_86E007BC(MiniActor* metapod, s32 arg1) {
     metapod->unk_244 = arg1;
     metapod->unk_29E = 0;
-    metapod->unk_2B2 = 0;
+    metapod->compExtraDelay = 0;
 }
 
 void func_86E007CC(MiniActor* metapod, s32 player) {
@@ -885,8 +885,8 @@ void miniMetapodCompControls(MiniActor* compMetapod, s32 nPlayer) {
             break;
 
         case 0x64:
-            compMetapod->unk_2B2--;
-            if (compMetapod->unk_2B2 <= 0) {
+            compMetapod->compExtraDelay--;
+            if (compMetapod->compExtraDelay <= 0) {
                 compMetapod->mainState = 0;
                 compMetapod->compState = 0;
             }
