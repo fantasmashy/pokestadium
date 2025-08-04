@@ -103,10 +103,10 @@ typedef struct unk_D_86002F58_004_000_040_004 {
 typedef struct unk_D_86002F58_004_000_040 {
     /* 0x00 */ s16 unk_00;
     /* 0x04 */ unk_D_86002F58_004_000_040_004* unk_04;
-    /* 0x08 */ s32 unk_08;
+    /* 0x08 */ s32 unk_08;			//	animation progress
     /* 0x0C */ u32 unk_0C;
     /* 0x10 */ char unk10[0x2];
-    /* 0x12 */ u16 unk_12;
+    /* 0x12 */ u16 unk_12;			//	frames alive
 } unk_D_86002F58_004_000_040; // size >= 0x14
 
 typedef struct unk_D_86002F58_004_000_054_004 {
@@ -128,9 +128,9 @@ typedef struct unk_D_86002F58_004_000_054 {
 } unk_D_86002F58_004_000_054; // size = 0xC
 
 typedef struct unk_D_86002F58_004_000_0A8 {
-    /* 0x00 */ u16 unk_00;
+    /* 0x00 */ u16 unk_00;					//	id ?
     /* 0x02 */ u8 unk_02;
-    /* 0x04 */ Vec3f unk_04;
+    /* 0x04 */ Vec3f unk_04;				//	local position ?
 } unk_D_86002F58_004_000_0A8; // size = 0x10
 
 typedef struct unk_D_86002F58_004_000 {
@@ -139,19 +139,19 @@ typedef struct unk_D_86002F58_004_000 {
     /* 0x01A */ s16 unk_01A;
     /* 0x01C */ u8 unk_01C;
     /* 0x01D */ u8 unk_01D;
-    /* 0x01E */ Vec3s unk_01E;			//	total Rotation
-    /* 0x024 */ Vec3f unk_024;			//	global Position
-    /* 0x030 */ Vec3f unk_030;			//	scale
-    /* 0x03C */ Color_RGBA8_u32 unk_03C;
+    /* 0x01E */ Vec3s unk_01E;				//	total Rotation
+    /* 0x024 */ Vec3f unk_024;				//	global Position
+    /* 0x030 */ Vec3f unk_030;				//	scale
+    /* 0x03C */ Color_RGBA8_u32 unk_03C;	//	color brightness
     /* 0x040 */ unk_D_86002F58_004_000_040 unk_040;
     /* 0x054 */ unk_D_86002F58_004_000_054 unk_054;
     /* 0x060 */ MtxF unk_060;
-    /* 0x0A0 */ Color_RGBA8_u32 unk_0A0;    //  vertex color ?
+    /* 0x0A0 */ Color_RGBA8_u32 unk_0A0;    //  color multiplier
     /* 0x0A4 */ char unk0A4[2];
     /* 0x0A6 */ u8 unk_0A6;
-    /* 0x0A7 */ u8 unk_0A7;
-    /* 0x0A8 */ unk_D_86002F58_004_000_0A8 unk_0A8[1];
-    /* 0x0B8 */ char unk0B8[0x24];
+    /* 0x0A7 */ u8 unk_0A7;					//	amount of unk_D_86002F58_004_000_0A8
+    /* 0x0A8 */ unk_D_86002F58_004_000_0A8 unk_0A8[3];	//	positions
+    /* 0x0B8 */ char unk0B8[0x4];
     /* 0x0DC */ Vec3f unk_0DC;
     /* 0x0E0 */ char unk0E0[0x4];
     /* 0x0EC */ Vec3f unk_0EC;

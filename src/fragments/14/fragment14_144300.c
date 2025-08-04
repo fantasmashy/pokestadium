@@ -103,7 +103,7 @@ static s32 D_8680750C;
 s32 D_86807510;
 static Controller D_86807518;
 static u16 D_8680753C;
-static s16 D_8680753E;
+static s16 D_8680753E;		//	the countdown started
 static s16 D_86807540;
 
 void func_86800020(s32 arg0) {

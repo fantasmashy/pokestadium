@@ -1096,11 +1096,12 @@ s32 func_80015360(void) {
     return var_v1;
 }
 
+//  gets a model's special point position vec3 ?
 Vec3f* func_80015390(unk_D_86002F58_004_000* arg0, s16 arg1, Vec3f* arg2) {
     s32 i;
-    s32 var_v0;
-    u8 temp_v1;
-    unk_D_86002F58_004_000* var_a2;
+    UNUSED s32 var_v0;
+    UNUSED u8 temp_v1;
+    UNUSED unk_D_86002F58_004_000* var_a2;
 
     for (i = 0; i < arg0->unk_0A7; i++) {
         if (arg1 == arg0->unk_0A8[i].unk_00) {

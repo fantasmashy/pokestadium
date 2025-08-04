@@ -1567,7 +1567,7 @@ static unk_func_87801684 D_86C0E33C[] = {
     { D_03041FC0, 4 },   { D_030426E0, 8 }, { D_03041FC0, 4 }, { NULL, 0 },
 };
 static s16 playerGUIScoreXPositions[] = { 0x32, 0x6E, 0xAA, 0xE6 };
-static Color_RGB8 playerColors[] = {
+static Color_RGB8 miniEkansPlayerColors[] = {
     { 0, 0, 0xB4 },    //  player 1 skans shadow color
     { 0, 0x82, 0 },    //  player 2 skans shadow color
     { 0xA0, 0, 0 },    //  player 3 skans shadow color
@@ -3312,7 +3312,7 @@ void func_86C03ED4(void) {
         if (ekans->mainState == 2) {
             gSPDisplayList(gDisplayListHead++, D_8140DD58);
 
-            func_81405B70(playerColors[i].r, playerColors[i].g, playerColors[i].b, (ekans->unk_000.unk_01D / 2) & 0xFF);
+            func_81405B70(miniEkansPlayerColors[i].r, miniEkansPlayerColors[i].g, miniEkansPlayerColors[i].b, (ekans->unk_000.unk_01D / 2) & 0xFF);
             func_80015390(&ekans->unk_000, 0xA, &sp7C);
 
             sp7C.y = 5.0f;
