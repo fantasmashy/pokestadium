@@ -4,7 +4,7 @@
 #include "global.h"
 
 typedef struct unk_func_87801684 {
-    /* 0x00 */ u32* unk_00;
+    /* 0x00 */ u8* unk_00;
     /* 0x04 */ s16 unk_04;
 } unk_func_87801684; // size = 0x8
 

@@ -10,7 +10,7 @@ s16 miniDifficulty;
 s16 D_87906048; //  unused?
 s16 D_8790604A;
 s32 pad_D_8790604C; //	unused?
-unk_D_86002F34_00C* D_87906050;
+unk_D_86002F34_00C* D_87906050; // geolayout / graftNode
 unk_D_86002F34_00C* D_87906054;
 s32 pad_D_87906058[2]; //	unused?
 s16 miniCameraXRot;

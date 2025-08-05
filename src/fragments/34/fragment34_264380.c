@@ -555,7 +555,7 @@ void func_81404150(u8* texture, s32 width, s32 height) {
                   G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOLOD);
 }
 
-void func_8140419C(u8* texture, s32 width, s32 height) {
+void func_8140419C(u32* texture, s32 width, s32 height) {
     func_81404094(texture, width, height);
 }
 
