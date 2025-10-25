@@ -23,7 +23,7 @@
 #include "src/stage_loader.h"
 
 typedef struct unk_D_86806E20 {
-    /* 0x00 */ u8* texture;
+    /* 0x00 */ u32* texture;
     /* 0x02 */ s16 width;
     /* 0x04 */ s16 height;
 } unk_D_86806E20; // size = 0x8
@@ -36,13 +36,13 @@ static u32 D_86806CD0[] = {
     0x06000000, 0x06000000, 0x03000000, 0x87806398, 0x06000000, 0x01000000,
 };
 
-static Controller** D_86806D68 = &gPlayer1Controller;
-static Controller** D_86806D6C = &gPlayer2Controller;
-static Controller** D_86806D70 = &gPlayer3Controller;
-static Controller** D_86806D74 = &gPlayer4Controller;
+static Controller** lickiP1Controller = &gPlayer1Controller;
+static Controller** lickiP2Controller = &gPlayer2Controller;
+static Controller** lickiP3Controller = &gPlayer3Controller;
+static Controller** lickiP4Controller = &gPlayer4Controller;
 
-static s16 D_86806D78[] = { 0x1E, 0x1E, 0x108, 0x108 };
-static s16 D_86806D80[] = { 0xCC, 0x10, 0x10, 0xCC };
+static s16 D_86806D78[] = { 0x1E, 0x1E, 0x108, 0x108 };	//	head's x position
+static s16 D_86806D80[] = { 0xCC, 0x10, 0x10, 0xCC };	//	head's y position
 
 static unk_D_86806E20 D_86806D88 = { 0x400C800, 32, 8 };
 static unk_D_86806E20 D_86806D90 = { 0x400CA00, 32, 8 };
@@ -116,7 +116,7 @@ void func_86800020(s32 arg0) {
 }
 
 void func_86800070(void) {
-    Controller* temp_v0;
+    Controller* tempCont;
 
     Cont_StartReadInputs();
     Cont_ReadInputs();
@@ -124,25 +124,25 @@ void func_86800070(void) {
 
     bzero(&D_86807518, sizeof(Controller));
 
-    temp_v0 = *D_86806D68;
-    D_86807518.buttonDown |= temp_v0->buttonDown;
-    D_86807518.buttonPressed |= temp_v0->buttonPressed;
-    D_86807518.unk_0A |= temp_v0->unk_0A;
+    tempCont = *lickiP1Controller;
+    D_86807518.buttonDown |= tempCont->buttonDown;
+    D_86807518.buttonPressed |= tempCont->buttonPressed;
+    D_86807518.unk_0A |= tempCont->unk_0A;
 
-    temp_v0 = *D_86806D6C;
-    D_86807518.buttonDown |= temp_v0->buttonDown;
-    D_86807518.buttonPressed |= temp_v0->buttonPressed;
-    D_86807518.unk_0A |= temp_v0->unk_0A;
+    tempCont = *lickiP2Controller;
+    D_86807518.buttonDown |= tempCont->buttonDown;
+    D_86807518.buttonPressed |= tempCont->buttonPressed;
+    D_86807518.unk_0A |= tempCont->unk_0A;
 
-    temp_v0 = *D_86806D70;
-    D_86807518.buttonDown |= temp_v0->buttonDown;
-    D_86807518.buttonPressed |= temp_v0->buttonPressed;
-    D_86807518.unk_0A |= temp_v0->unk_0A;
+    tempCont = *lickiP3Controller;
+    D_86807518.buttonDown |= tempCont->buttonDown;
+    D_86807518.buttonPressed |= tempCont->buttonPressed;
+    D_86807518.unk_0A |= tempCont->unk_0A;
 
-    temp_v0 = *D_86806D74;
-    D_86807518.buttonDown |= temp_v0->buttonDown;
-    D_86807518.buttonPressed |= temp_v0->buttonPressed;
-    D_86807518.unk_0A |= temp_v0->unk_0A;
+    tempCont = *lickiP4Controller;
+    D_86807518.buttonDown |= tempCont->buttonDown;
+    D_86807518.buttonPressed |= tempCont->buttonPressed;
+    D_86807518.unk_0A |= tempCont->unk_0A;
 
     if (1) {}
 }
@@ -288,9 +288,9 @@ void func_86800B38(void) {
             }
 
             if (!(D_86807558[i].unk_002 & 4)) {
-                func_87801644(i, D_86806D78[i], D_86806D80[i] + var_v0, 0.75f);
+                func_87801644(i, D_86806D78[i], D_86806D80[i] + var_v0, 0.75f);			// particles
             } else {
-                func_87801644(-1 - i, D_86806D78[i], D_86806D80[i] + var_v0, 0.75f);
+                func_87801644(-1 - i, D_86806D78[i], D_86806D80[i] + var_v0, 0.75f);	// particles
             }
         }
     }
