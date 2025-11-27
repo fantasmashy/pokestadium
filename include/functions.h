@@ -6,6 +6,9 @@
 void func_80057FD0(void *, int);
 s32 func_8005A990(OSPiHandle *);
 
+// 517A0.s
+void func_80050BA0(s32, void*);
+
 // bcopy.s
 void _bcopy(void* src, void* dst, s32);
 
@@ -17,9 +20,6 @@ void Yay0_Decompress(void* src, void* dst);
 
 // DDC0.s
 void func_8000D564(void);
-
-// E570.s
-void func_8000D970(OSPfs *);
 
 // exception_set.s
 void set_watch_lohi(s32);

@@ -105,6 +105,7 @@ void func_8004153C(void);
 void func_80041688(void);
 void func_800416BC(void);
 void func_80041A98(void);
+void func_80041CEC(void);
 void func_80041C70(u32 arg0);
 void func_80041D50(u8* arg0, u8* arg1);
 u16 func_80041D70(u16 arg0);
@@ -112,6 +113,5 @@ void func_80041DF4(u16 arg0);
 void func_80041E40(u16 arg0);
 u32 func_80041EF4(u16* arg0);
 void func_800420C0(u16* arg0);
-void func_80048014(void);
 
 #endif // _3D140_H_

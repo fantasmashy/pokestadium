@@ -18,6 +18,15 @@ typedef unsigned int uintptr_t;
 
 struct unk_D_86002F58_004_000_00C;
 
+typedef union arg1_func_80010CA8 {
+    struct {
+        /* 0x00 */ s16 unk_00;
+        /* 0x02 */ s8 unk_02;
+        /* 0x03 */ s8 unk_03;
+    };
+    u32 raw;
+} arg1_func_80010CA8; // size = 0x4
+
 typedef struct unk_D_86002F58_004_000_00C_028 {
     /* 0x00 */ char pad0[4];
     /* 0x04 */ u8 unk_04;
@@ -28,14 +37,6 @@ typedef struct unk_D_86002F58_004_000_00C_028 {
 } unk_D_86002F58_004_000_00C_028; // size >= 0x14
 
 typedef unk_D_86002F58_004_000_00C_028* (*unk_D_86002F58_004_000_00C_028_func)(s32, s32);
-
-typedef union unk_D_86002F58_004_000_010_02C {
-    struct {
-        u16 unk_00;
-        u16 unk_02;
-    };
-    u32 raw;
-} unk_D_86002F58_004_000_010_02C; // size = 0x4
 
 typedef struct unk_D_86002F58_004_000_010_024 {
     /* 0x00 */ u16 unk_00;
@@ -54,7 +55,7 @@ typedef struct unk_D_86002F58_004_000_010 {
     /* 0x20 */ s32 unk_20;
     /* 0x24 */ unk_D_86002F58_004_000_010_024* unk_24;
     /* 0x28 */ s32 unk_28;
-    /* 0x2C */ unk_D_86002F58_004_000_010_02C unk_2C;
+    /* 0x2C */ arg1_func_80010CA8 unk_2C;
     /* 0x30 */ OSMesgQueue unk_30;
     /* 0x48 */ OSMesg unk_48;
     /* 0x4C */ char pad4C[0x4];
@@ -467,19 +468,20 @@ typedef struct UnkInputStruct8000D738 {
     /* 0x04 */ u16 (*unk_04)[6][0x640];
 } UnkInputStruct8000D738; // size = 0x8
 
-typedef struct UnkStruct800AA660 {
+typedef struct unk_D_800AA660 {
     /* 0x0000 */ OSThread thread;
     /* 0x01B0 */ char unk01B0[0x10];
     /* 0x01C0 */ OSMesgQueue queue1;
-    /* 0x01D8 */ struct UnkStruct800AA660* unk_01D8;
+    /* 0x01D8 */ struct unk_D_800AA660* unk_01D8;
     /* 0x01DC */ s32 unk_01DC;
     /* 0x01E0 */ char unk01E0[0x2000];
     /* 0x21E0 */ OSMesg mesg;
     /* 0x21E4 */ OSMesgQueue queue2;
-    /* 0x21FC */ s32 unk_21FC;
-    /* 0x2200 */ s32 unk_2200;
+    /* 0x21FC */ u8* font1;
+    /* 0x2200 */ u8* font2;
     /* 0x2204 */ UnkInputStruct8000D738 unk_2204;
-} UnkStruct800AA660; // size >= 0x220C
+    /* 0x220C */ char unk220C[4];
+} unk_D_800AA660; // size = 0x2210
 
 typedef struct unk_D_864027C0 {
     /* 0x00 */ f32 unk_00;
@@ -532,6 +534,77 @@ typedef struct TrainerData {
     /* 0x038 */ u16 gfx_file_idx; // high byte battle_portraits, low byte ukn
     /* 0x03A */ char unk3A[0x1F6];
 } TrainerData; // size = 0x230
+
+// GB Emulator State
+typedef struct unk_D_8122B2C0 {
+    /* 0x00000 */ u8 unk_00[0x208];
+    /* 0x00208 */ u8 unk_208[0x40];
+    /* 0x00248 */ u8 unk_248[0x40];
+    /* 0x00288 */ u8 unk_288[0x100];
+    /* 0x00388 */ u8 unk_388[0x400];
+    /* 0x00788 */ u8 unk_788[0x4000];
+    /* 0x04788 */ u8 unk_4788[0xC00];
+    /* 0x05388 */ s32 unk_5388;
+    /* 0x0538C */ char unk0538C[4];
+    /* 0x05390 */ u32 unk_5390;
+    /* 0x05394 */ u32 unk_5394;
+    /* 0x05398 */ u32 unk_5398;
+    /* 0x0539C */ u32 unk_539C;
+    /* 0x53A0 */ char unk053A0[0x8];
+    /* 0x053A8 */ void* unk_53A8;
+    /* 0x053AC */ void* unk_53AC;
+    /* 0x053B0 */ void* unk_53B0;
+    /* 0x053B4 */ void* unk_53B4;
+    /* 0x053B8 */ char unk053B8[0x4];
+    /* 0x053BC */ void* unk_53BC;
+    /* 0x053C0 */ char unk053C0[0x2E];
+    /* 0x053EE */ u16 unk_53EE;
+    /* 0x053F0 */ u16 unk_53F0;
+    /* 0x053F2 */ char unk053F1[0xA];
+    /* 0x053FC */ u8 unk_53FC;
+    /* 0x053FD */ u8 unk_53FD;
+    /* 0x053FE */ u8 unk_53FE;
+    /* 0x053FF */ char unk053FF[0x86];
+    /* 0x05485 */ u8 unk_5485;
+    /* 0x05486 */ char unk05486[0x8];
+    /* 0x0548E */ u8 unk_548E;
+    /* 0x0548F */ char unk0548F[0xD];
+    /* 0x0549C */ u8 unk_549C[0x100];
+    /* 0x0559C */ u8 unk_559C[0x10];
+    /* 0x055AC */ u8 unk_55AC[0x40];
+    /* 0x055EC */ u8 unk_55EC[0x40];
+    /* 0x0562C */ u8 unk_562C[0x200];
+    /* 0x0582C */ u8 unk_582C[0x200];
+    /* 0x05A2C */ u8 unk_5A2C[0x200];
+    /* 0x05C2C */ char unk05C2C[0x2C];
+    /* 0x05C58 */ void* unk_5C58;
+    /* 0x05C5C */ char unk_5C5C[0x50];
+    /* 0x05CAC */ OSGbpakId gbpakId;
+    /* 0x05CFC */ OSPfs* pfs;
+    /* 0x05D00 */ char unk05D00[0x64];
+    /* 0x05D64 */ u8* transferBuffer;
+    /* 0x05D68 */ u32 gbAddress;
+    /* 0x05D6C */ s32 transferSize;
+    /* 0x05D70 */ u32 unk_5D70[4];
+    /* 0x05D80 */ u32 unk_5D80[4];
+    /* 0x05D90 */ u32 unk_5D90[4];
+    /* 0x05DA0 */ u16 unk_5DA0;
+    /* 0x05DA2 */ u16 unk_5DA2;
+    /* 0x05DA4 */ char unk05DA4[0x20];
+    /* 0x05DC4 */ u8 unk_5DC4;
+    /* 0x05DC5 */ u8 unk_5DC5;
+    /* 0x05DC6 */ char unk05DC6[0x2];
+    /* 0x05DC8 */ volatile u8 unk_5DC8;
+    /* 0x05DC9 */ u8 unk_5DC9;
+    /* 0x05DCA */ u8 unk_5DCA;
+    /* 0x05DCB */ u8 status;
+    /* 0x05DCC */ u8 unk_5DCC;
+    /* 0x05DCD */ char unk05DCD[1];
+    /* 0x05DCE */ u8 unk_5DCE;
+    /* 0x05DCF */ u8 unk_5DCF;
+    /* 0x05DD0 */ u8 unk_5DD0;
+    /* 0x05DD1 */ u8 unk05DD1[0x15287];
+  } unk_D_8122B2C0; // size = 0x1B058
 
 extern s16 D_80075E40[];
 
