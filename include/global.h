@@ -104,7 +104,7 @@ typedef struct unk_D_86002F58_004_000_040 {
     /* 0x00 */ s16 unk_00;
     /* 0x04 */ unk_D_86002F58_004_000_040_004* unk_04;
     /* 0x08 */ s32 unk_08;			//	animation progress
-    /* 0x0C */ u32 unk_0C;
+    /* 0x0C */ u32 unk_0C;          //  holes' animation speed on sandshew's minigame
     /* 0x10 */ char unk10[0x2];
     /* 0x12 */ u16 unk_12;			//	frames alive
 } unk_D_86002F58_004_000_040; // size >= 0x14

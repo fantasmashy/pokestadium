@@ -344,11 +344,13 @@ s32 func_800173DC(unk_D_86002F58_004_000* arg0, s16 arg1, void* arg2, s32 arg3) 
     return ptr->unk_08 >> 0x10;
 }
 
+// advance animation by x frames ?
 s32 func_80017454(unk_D_86002F58_004_000* arg0, s32 arg1) {
     arg0->unk_040.unk_0C = arg1;
     return arg0->unk_040.unk_08 >> 0x10;
 }
 
+// jump to x frame animation ?
 void func_80017464(unk_D_86002F58_004_000* arg0, s16 arg1) {
     arg0->unk_040.unk_08 = (arg1 << 0x10) - arg0->unk_040.unk_0C;
 }

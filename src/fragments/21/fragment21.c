@@ -1903,36 +1903,36 @@ void func_86F00D04(void) {
     }
 }
 
-void initSandshrewHole(MiniActor* a0, s32 arg1) {
-    MiniActor* sandshrewHole = a0;
+void initSandshrewHole(MiniActor* sandshrewHole, s32 arg1) {
+    MiniActor* sandshrewHolePtr = sandshrewHole;
 
-    sandshrewHole->scale.x = 1.0f;
-    sandshrewHole->scale.y = 1.0f;
-    sandshrewHole->scale.z = 1.0f;
+    sandshrewHolePtr->scale.x = 1.0f;
+    sandshrewHolePtr->scale.y = 1.0f;
+    sandshrewHolePtr->scale.z = 1.0f;
 
-    sandshrewHole->position_1.x = sandshrewPositions[arg1].x;
-    sandshrewHole->position_1.y = sandshrewPositions[arg1].y;
-    sandshrewHole->position_1.z = sandshrewPositions[arg1].z;
+    sandshrewHolePtr->position_1.x = sandshrewPositions[arg1].x;
+    sandshrewHolePtr->position_1.y = sandshrewPositions[arg1].y;
+    sandshrewHolePtr->position_1.z = sandshrewPositions[arg1].z;
 
-    sandshrewHole->totalRot.x = sandshrewHole->xRot_1 = sandshrewHole->unk_220 = sandshrewHole->xRot_2 =
-        sandshrewHole->unk_22C = 0;
-    sandshrewHole->totalRot.y = sandshrewHole->yRot_1 = sandshrewHole->unk_222 = sandshrewHole->yRot_2 =
-        sandshrewHole->ySpinSpeed = 0;
-    sandshrewHole->totalRot.z = sandshrewHole->zRot_1 = sandshrewHole->unk_224 = sandshrewHole->zRot_2 =
-        sandshrewHole->unk_230 = 0;
+    sandshrewHolePtr->totalRot.x = sandshrewHolePtr->xRot_1 = sandshrewHolePtr->unk_220 = sandshrewHolePtr->xRot_2 =
+        sandshrewHolePtr->unk_22C = 0;
+    sandshrewHolePtr->totalRot.y = sandshrewHolePtr->yRot_1 = sandshrewHolePtr->unk_222 = sandshrewHolePtr->yRot_2 =
+        sandshrewHolePtr->ySpinSpeed = 0;
+    sandshrewHolePtr->totalRot.z = sandshrewHolePtr->zRot_1 = sandshrewHolePtr->unk_224 = sandshrewHolePtr->zRot_2 =
+        sandshrewHolePtr->unk_230 = 0;
 
-    sandshrewHole->position_2.x = 0.0f;
-    sandshrewHole->position_2.y = 0.0f;
-    sandshrewHole->position_2.z = 0.0f;
+    sandshrewHolePtr->position_2.x = 0.0f;
+    sandshrewHolePtr->position_2.y = 0.0f;
+    sandshrewHolePtr->position_2.z = 0.0f;
 
-    sandshrewHole->miniHealth = sandshrewHole->miniMaxHealth = 0x64;
+    sandshrewHolePtr->miniHealth = sandshrewHolePtr->miniMaxHealth = 0x64;
 
-    sandshrewHole->unk_272 = 0;
-    sandshrewHole->unk_2A4 = 0;
-    sandshrewHole->mainState = 0;
-    sandshrewHole->unk_24A = 0;
+    sandshrewHolePtr->unk_272 = 0;
+    sandshrewHolePtr->unk_2A4 = 0;
+    sandshrewHolePtr->mainState = 0;
+    sandshrewHolePtr->unk_24A = 0;
 
-    sandshrewHole->unk_000.unk_000.unk_01 &= ~1;
+    sandshrewHolePtr->unk_000.unk_000.unk_01 &= ~1;
 }
 
 void initSandshrewHoles(void) {

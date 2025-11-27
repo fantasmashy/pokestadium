@@ -1592,9 +1592,9 @@ void miniDrawMetapodHeads(void) {
 
     for (i = 0, tmp = 0x26; i < 4; tmp += 0x4A, i++) {
         if (D_879060C4[i] == 0) {
-            func_87801644(i, tmp, 0xD6, 0.7f); //  draw player icon
+            func_87801644(i, tmp, 0xD6, 0.7f); //  draw human player icon
         } else {
-            func_87801644(-1 - i, tmp, 0xD6, 0.7f); //  draw player icon
+            func_87801644(-1 - i, tmp, 0xD6, 0.7f); //  draw comp player icon
         }
     }
 
