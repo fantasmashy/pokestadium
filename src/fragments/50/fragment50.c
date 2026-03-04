@@ -9,6 +9,7 @@
 #include "src/232C0.h"
 #include "src/26820.h"
 #include "src/2E110.h"
+#include "src/32D10.h"
 #include "src/3FB0.h"
 #include "src/49790.h"
 #include "src/4BDC0.h"
@@ -76,7 +77,6 @@ static s32 D_8267E750;
 static s32 D_8267E754;
 static s32 D_8267E758;
 static char** D_8267E75C;
-static char** D_8267E760;
 
 static u32 D_82603E80[] = {
     0xA4CAA4DE, 0xA4A80000, 0xA5ECA5D9, 0xA5EB0000, 0xA4AAA4E4, 0x00000000, 0xA4C7A4F3, 0xA4C9A4A6, 0xA4A4A4EA,
